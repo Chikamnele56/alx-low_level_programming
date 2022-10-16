@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * mai-program entry point.
+ * main-program entry point.
  * Return:0 success, non zero fail
  */
 int main(void)
