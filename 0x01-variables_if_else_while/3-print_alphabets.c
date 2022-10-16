@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 /**
  *main-program entry point.
  *Return:0 no error, non zero if error.
@@ -15,7 +16,7 @@ int main(void)
 	}
 	for (j = 'A'; j <= 'Z'; j++)
 	{
-		putchar(j)
+		putchar(j);
 	}
 	putchar('\n');
 	return (0);
