@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * test_isalpha - checks for alphabetical letters
+ * _isalpha - checks for alphabetical letters
  * @c: a character to be checked on
  * Return: return 0 or 1 depending on condition
  */
@@ -10,7 +10,7 @@ int _isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 	_putchar('\n');
-	return(0);
-        return(1);
+	return (0);
+	return (1);
 
 }
