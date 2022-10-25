@@ -12,7 +12,6 @@ int _abs(int n)
 			n = -n;
 		return (n);
 	}
-	else
 	{
 		if (n > -n)
 			return (-n);
