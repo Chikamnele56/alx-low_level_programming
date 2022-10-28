@@ -8,7 +8,7 @@
 void print_number(int num)
 {
 	unsigned int d = 10, n;
-	
+
 	if (num < 0)
 	{
 		_putchar('-');
@@ -28,7 +28,7 @@ void print_number(int num)
 			if (d == 1000000000)
 				break;
 		}
-		if (!(d >= 1000000000) || n > 1000000000)
+		if (!(d >= 1000000000) || n > 100000000)
 		if (!(d == 1000000000) || n == 123456789)
 			d /= 10;
 		_putchar('0' + n / d);
