@@ -17,7 +17,7 @@ int main(void)
 	{
 	if (number % inc == 0)
 	{
-		number / 2;
+		number /= 2;
 		continue;
 	}
 
