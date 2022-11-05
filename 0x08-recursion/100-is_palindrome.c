@@ -17,7 +17,8 @@ int _strlen_recursion(char *s)
  * @x: iterration
  * @y: length of s
  * @s: string
- * Return: 1 0r 0
+ * Return: 1 or 0
+ *
  */
 int palcheck(int x, int y, char *s)
 {
