@@ -17,7 +17,7 @@ void _print(char *str, int l)
 	{
 		if (str[i] != '0')
 			j = 1;
-		if (j || l - 1)
+		if (j || i == l - 1)
 			_putchar(str[i]);
 		i++;
 	}
@@ -125,7 +125,7 @@ int main(int argc, char *argv[])
 	init(a, ln - 1);
 	for (ti = l2 - 1, i = 0; ti >= 0; ti--, i++)
 	{
-		t = mul(argv[2][ti], argv[1], li - 1, a, (ln - 2) - i);
+		t = mul(argv[2][ti], argv[1], l1 - 1, a, (ln - 2) - i);
 		if (t == NULL)
 		{
 			for (ti = 0; e[ti]; ti++)
