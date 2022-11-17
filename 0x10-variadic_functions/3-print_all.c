@@ -31,10 +31,10 @@ void print_s(va_list s)
  */
 void print_i(va_list i)
 {
-	printf("%f", va_arg(i, int));
+	printf("%d", va_arg(i, int));
 }
 /**
- * print_f - ptints a float
+ * print_f - prints a float
  * @f: float to print
  * Return: void
  */
@@ -44,7 +44,7 @@ void print_f(va_list f)
 }
 /**
  * print_all - prints anything
- * @format: list of argument types passed to th function
+ * @format: list of argument types passed to the function
  * Return: void
  */
 void print_all(const char * const format, ...)
