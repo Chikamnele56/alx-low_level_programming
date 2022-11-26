@@ -83,7 +83,7 @@ void print_all(const char * const format, ...)
 		if (j < 4)
 		{
 			printf("%s", separator);
-			funcs[j].f(valist);
+			funcs[j].print(args);
 			separator = ", ";
 		}
 		i++;
