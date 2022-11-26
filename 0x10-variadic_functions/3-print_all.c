@@ -37,9 +37,9 @@ void print_string(va_list arg)
 void print_int(va_list arg)
 {
 	int num;
-	
+
 	num = va_arg(arg, int);
-	
+
 	printf("%d", num);
 }
 /**
@@ -62,18 +62,18 @@ void print_float(va_list arg)
 void print_all(const char * const format, ...)
 {
 	va_list args;
-	
+
 	int i = 0, j = 0;
-	
+
 	char *separator = "";
-	
+
 	printer_t funcs[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{"i", print_int},
 		{"f", print_float}
 	};
-	
+
 	va_start(args, format);
 	while (format && (*(format + i)))
 	{
