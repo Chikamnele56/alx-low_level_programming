@@ -10,11 +10,13 @@ void close_file(int fd);
  * @file: The name of the file buffer is storing chars for.
  * Return: A pointer to the newly-allocated buffer.
  */
+
 char *create_buffer(char *file)
 {
 	char *buffer;
 
 	buffer = malloc(sizeof(char) * 1024);
+
 	if (buffer == NULL)
 	{
 		dprintf(STDERR_FILENO,
@@ -33,6 +35,7 @@ void close_file(int fd)
 	int c;
 
 	c = close(fd);
+
 	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
@@ -50,9 +53,11 @@ void close_file(int fd)
  * If file_to cannot be created or written to - exit code 99.
  * If file_to or file_from cannot be closed - exit code 100.
  */
+
 int main(int argc, char *argv[])
 {
 	int from, to, r, w;
+
 	char *buffer;
 
 	if (argc != 3)
@@ -60,6 +65,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
@@ -72,6 +78,7 @@ int main(int argc, char *argv[])
 			free(buffer);
 			exit(98);
 		}
+
 		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
